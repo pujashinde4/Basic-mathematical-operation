@@ -1,0 +1,32 @@
+//return factorial of three number
+#include<stdio.h>
+int fact(int n);
+int arr[5];
+int fact(int n)
+{
+    if(n>=1)
+       return n*fact(n-1);
+    else
+       return 1;
+}
+int *factorial(int num1,int num2,int num3)
+{
+        arr[0]=fact(num1);
+        arr[1]=fact(num2);
+        arr[2]=fact(num3);
+    return arr;
+}
+int main()
+{
+    int num1,num2,num3,i;
+    int *ptr_arr;
+    printf("\nenter the number to calculate factorial:");
+    scanf("%d%d%d",&num1,&num2,&num3);
+  ptr_arr=factorial(num1,num2,num3);
+ printf("\nfactorials of numbers are:");
+ for(i=0;i<3;i++)
+ {
+    printf("%d\n",ptr_arr[i]);
+ }
+    return 0; 
+}

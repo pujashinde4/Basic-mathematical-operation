@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+float p1=22.5,p2=44.50,p3=9.98;
+float sum1,sum2,sum3,total;
+int product;
+int quantity;
+printf("enter the quantity and product number: ");
+scanf("%d%d", &product, &quantity);
+while((product!=0))
+{
+switch(product)
+{
+case 1:
+sum1 = (float)quantity*p1;
+break;
+case 2:
+sum2 = (float)quantity*p2;
+break;
+case 3:
+sum3 = (float)quantity*p3;
+break;
+default:
+printf("invalid input");
+break;
+}
+}
+total=(float)sum1+sum2+sum3;
+printf("total sale is : %f\n", total);
+return 0;
+}

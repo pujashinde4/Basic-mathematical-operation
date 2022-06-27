@@ -1,0 +1,54 @@
+int display(int score1,int score2,int score3);
+int add(int score1,int score2,int score3);
+int avg(int score1,int score2,int score3,int n);
+int sum;
+int average;
+//displaying scores
+int display(int score1,int score2,int score3)
+{
+    printf("\nscore1=%d\nscore2=%d\nscore3=%d",score1,score2,score3);
+}
+//code for addition
+int add(int score1,int score2,int score3)
+{
+  sum=0;
+  sum=sum+score1+score2+score3;
+  return sum;
+  printf("sum is:%d",sum);
+}
+//logic for average
+int avg(int score1,int score2,int score3,int n)
+{
+    average=(score1+score2+score3)/n;
+    printf("\naverage is=%d",average);
+}
+int main()
+{
+    int score1,score2,score3,n,sum;
+    printf("\nenter the scores:");
+    scanf("%d%d%d",&score1,&score2,&score3);
+    printf("\nenter the value of n");
+    scanf("%d",&n);
+    display(score1,score2,score3);
+    add(score1,score2,score3);
+    avg(score1,score2,score3,n);
+   // printf("\nsum is:%d",sum);
+    if(average>=90)
+    {
+        printf("grade A");
+    }
+    else if(average>=70&&average<90)
+    {
+        printf("grade B");
+    }
+    else if(average>=50&&average<70)
+    {
+        printf("grade C");
+    }
+    else 
+    {
+        printf("grade D");
+    }
+
+    return 0;
+}

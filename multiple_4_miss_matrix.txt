@@ -1,0 +1,44 @@
+//program for 2-diamensional array to display th contents
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    int arr1[5][5];
+    //accept the matrix
+    printf("enter the matrix");
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+   //print the output matrix
+     for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            printf("%d\t",arr1[i][j]);
+        }
+        printf("\n");
+    }
+    //print the matrix
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=5;j++)
+        {
+            //printf("\noutput matrix is:\n");
+            if(arr1[i][j]%4==0)
+            {
+            printf("\t");
+            }
+            else
+            {
+                printf("%d\t",arr1[i][j]);
+            }
+        }
+        printf("\n");
+    }
+     
+}
+

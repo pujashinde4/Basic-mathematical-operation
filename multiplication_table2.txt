@@ -1,0 +1,30 @@
+//Returning multiplication table
+#include<stdio.h>
+int *mul_table(int num1,int num2);
+int arr[20];
+int *mul_table(int num1,int num2)
+{
+    int i;
+    for(i=1;i<=num2;i++)
+    {
+       arr[i]=num1*i; 
+    }
+    return arr;
+}
+
+int main()
+{
+    int i,num1,num2;
+    int *ptr_arr;
+    printf("enter the number from where the multiplication starts:\n");
+    scanf("%d",&num1);
+    printf("enter the number where multiplication ends\n");
+    scanf("%d",&num2);
+    printf("table(%d,%d)\n",num1,num2);
+    ptr_arr=mul_table(num1,num2);
+    for(i=1;i<=num2;i++)
+    {
+       printf("%d\n",ptr_arr[i]); 
+    }
+    return 0;
+}

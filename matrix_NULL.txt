@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    int arr1[5][5];
+    //accept the matrix
+    printf("enter the matrix");
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            scanf("%d",&arr1[i][j]);
+        }
+    }
+    //print the matrix
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            printf("%d\t",arr1[i][j]);
+            
+        }
+        printf("\n");
+    }
+    //print the null values
+    for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            if((i==0&&j==3)||(i==1&&j==2)||(i==2&&j==1)||(i==3&&j==0)||(i==3&&j==4)||(i==4&&j==3))
+            arr1[i][j]=NULL;
+    }
+        printf("\n");
+    }
+    //print the output matrix
+     for(i=0;i<5;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            printf("%d\t",arr1[i][j]);
+            
+        }
+        printf("\n");
+    }
+}
